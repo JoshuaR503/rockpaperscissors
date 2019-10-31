@@ -5,6 +5,8 @@
   <title>RPS Game</title>
   <!-- Link CSS here -->
   <link type='text/css' rel='stylesheet' href='css/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -16,17 +18,21 @@
         4. Style your page with colors, fonts, etc.
      -->
     
-  <div class="row">
+  <div class="container text-center">
       <h1>Rock Paper Scissors</h1>
-      <img src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
+      <img class="img-fluid mt-4 mb-4" src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
 
       <h3>Please Submit Your Choice Below</h3>
-      <div>
-        <input id="input">
-        <button id="shoot">Shoot!</button>
+
+      <div class="input-group mb-3 mt-4">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="button" id="shoot">Shoot</button>
+        </div>
+  
+        <input type="text" class="form-control" id="input">
       </div>
 
-      <div id="choices" class="row">
+      <div id="choices">
         <div>
           <h4>User Choice</h4>
           <p id="userChoice"></p>
