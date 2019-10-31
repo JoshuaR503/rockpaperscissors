@@ -45,8 +45,8 @@ const compareResponses = (user, computer) => {
 // DOM Handler
 const domHandler = (user, computer) => {
 
-    const userMessage = document.querySelector('');
-    const computerMessage = document.querySelector('');
+    const userMessage = document.querySelector('#userChoice');
+    const computerMessage = document.querySelector('#computerChoice');
 
     userMessage.innerHTML = user;
     computerMessage.innerHTML = computer;
@@ -62,7 +62,7 @@ btn.addEventListener('click', () => {
     const computer = computerInput();
     const winner = compareResponses(user, computer);
 
-    console.log(winner);
+    domHandler(user, computer);
 
 });
 
