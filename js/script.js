@@ -39,7 +39,7 @@ const compareResponses = (user, computer) => {
             return counterManager('user');
         
         // TODO: find a way to reuse the code!
-        case 'scissors rocks':
+        case 'scissors rock':
             return counterManager('computer');
         case 'paper scissors':
             return counterManager('computer');
