@@ -10,49 +10,45 @@
   <script src="https://kit.fontawesome.com/798e66d2c1.js" crossorigin="anonymous"></script>
 
 
+
 </head>
 
 <body>
   
-   <!-- HTML/CSS options: In the div below. 
-        1. In the header tag, change a title.
-        2. In a paragraph tag, add instructions on how to play the game.
-        3. Change the RPS image.
-        4. Style your page with colors, fonts, etc.
-     -->
-    
-  <div class="container text-center mt-4">
-      <h1>Rock Paper Scissors</h1>
-      <img class="img-fluid mt-4 mb-4" src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
+  <div class="container text-center">
+    <h1 class="mt-4 mb-4" style="color: white">Rock Paper Scissors</h1>
 
-      <h3>Please Submit Your Choice Below</h3>
-
-      <div class="input-group mb-3 mt-4">
-        <div class="input-group-prepend">
-          <button class="btn btn-outline-secondary" type="button" id="shoot">Shoot</button>
-
-          <button class="btn btn-outline-secondary" type="button" id="refresh">
-            <i class="fas fa-redo"></i>
-          </button>
+    <div class="container">
+      <div class="row  justify-content-center align-items-center">
+        <div onclick="init('rock')" class="rounded emoji col-3 mt-4 mb-4">
+          ✊
         </div>
-  
-        <input type="text" class="form-control" id="input">
-      </div>
 
-      <h1 id="counter" class="text-center"> 0 - 0</h1>
+        <div onclick="init('paper')" class="rounded emoji col-3 mt-4 mb-4">
+          ✋
+        </div>
+
+        <div onclick="init('scissors')" class="rounded emoji col-3 mt-4 mb-4">
+          ✂️
+        </div>
+
+      </div>
+    </div>
+
+      <h1 style="color: white;" id="counter" class="text-center mt-4 mb-4"> 0 - 0</h1>
 
       <div id="choices">
         <div>
-          <h4>User Choice</h4>
-          <p id="userChoice"></p>
+          <h4 style="color: white;">You</h4>
+          <p style="color: white;" id="userChoice"></p>
         </div>
         <div>
-          <h4>Computer Choice</h4>
-          <p id="computerChoice"></p>
+          <h4 style="color: white;">Computer</h4>
+          <p style="color: white;" id="computerChoice"></p>
         </div>
       </div>
       
-      <h2 class="text-center" id="result"></h2>
+      <h2 style="color: white" class="text-center" id="result"></h2>
 
       <br>
       <br>

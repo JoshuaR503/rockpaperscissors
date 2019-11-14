@@ -7,3 +7,20 @@
   justify-content:space-between;
   
 }
+
+body {
+  background-color: #222222!important;
+  color: white;
+
+}
+
+.rounded {
+  background-color: #313131;
+  border: solid #454545;
+  margin: 15px!important;
+  user-select: none;
+}
+
+.emoji {
+  font-size: 80px;
+}

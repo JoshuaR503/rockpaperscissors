@@ -1,14 +1,6 @@
 let computerScore = 0;
 let userScore = 0;
 
-// Reset Counter
-const resetCounter = () => {
-    computerScore = 0;
-    userScore = 0;
-
-    domHandler('', '', '');
-}
-
 // Return a random response.
 const computerInput = () => {
     const responses = ['rock', 'paper', 'scissors'];
@@ -75,25 +67,26 @@ const domHandler = (user, computer, winner) => {
     computerMessage.innerHTML = computer;
 }
 
+// Reset Counter
+const resetCounter = () => {
+    computerScore = 0;
+    userScore = 0;
+
+    domHandler('', '', '');
+}
+
 // CORE
 const userInput = document.querySelector('#input');
 const shotBtn = document.querySelector('#shoot');
 const refreshBtn = document.querySelector('#refresh');
 
 // Refresh Handler. 
-refreshBtn.addEventListener('click', () => resetCounter());
+//refreshBtn.addEventListener('click', () => resetCounter());
 
-// Click handler.
-shotBtn.addEventListener('click', () => {
-
-    const user = input.value;
-
-    if (!user) return;
+const init = (input) => {
 
     const computer = computerInput();
-    const winner = compareResponses(user.toLowerCase(), computer);
-
-    input.value = '';
+    const winner = compareResponses(input, computer);
  
-    domHandler(user, computer, winner);
-});
+    domHandler(input, computer, winner);
+}
